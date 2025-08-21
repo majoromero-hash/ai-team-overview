@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analytics & Insights — Roche Canada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ================= Roche Brand Tokens (reused) ================= */
+    :root{
+      --roche-blue:#0b41cd;
+      --roche-blue-dark:#022366;
+      --roche-blue-xlight:#bde3ff;
+
+      --neutral-4:#fff7f5;
+      --grey-1:#544f4f;
+      --grey-2:#706b69;
+      --grey-3:#c2bab5;
+      --grey-5:#f5f5f2;
+
+      --bg: var(--grey-5);
+      --card:#fff;
+      --ink: var(--grey-1);
+      --ink-muted: var(--grey-2);
+      --line: rgba(0,0,0,.08);
+      --radius-xl: 18px;
+      --radius-lg: 14px;
+      --shadow: 0 10px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      line-height:1.55;
+      background:linear-gradient(0deg, var(--neutral-4), var(--grey-5));
+    }
+    .wrap{max-width:1200px; margin:28px auto 64px; padding:0 20px;}
+
+    /* Header (hero) */
+    header.hero{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-left:6px solid var(--roche-blue);
+      border-radius:var(--radius-xl);
+      padding:28px 24px;
+      box-shadow:var(--shadow);
+    }
+    .hero h1{margin:0 0 6px; font-size:clamp(28px,2.5vw + 10px,40px); color:var(--roche-blue-dark)}
+    .hero p{margin:0; color:var(--ink-muted); max-width:72ch}
+    .hero .meta{margin-top:8px; font-weight:600; color:var(--roche-blue-dark)}
+
+    /* Section shells */
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      margin-top:22px;
+      overflow:hidden;
+    }
+    .section-header{
+      padding:18px 22px;
+      display:flex; justify-content:space-between; align-items:baseline;
+      position:relative; border-bottom:1px solid var(--line);
+    }
+    .section-header::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--roche-blue)}
+    .section-title{margin:0; font-size:1.2rem; font-weight:700; color:var(--roche-blue-dark)}
+    .section-meta{font-size:.9rem; color:var(--ink-muted); font-weight:600}
+    .section-body{padding:18px 22px}
+
+    /* Layout helpers */
+    .grid{
+      display:grid;
+      gap:16px;
+    }
+    @media (min-width: 840px){
+      .grid.cols-2{grid-template-columns:1fr 1fr}
+    }
+
+    /* Cards for highlights */
+    .card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size:1.05rem; color:var(--roche-blue-dark)
+    }
+    .lead{
+      font-weight:600; color:var(--ink);
+    }
+    .muted{color:var(--ink-muted)}
+    ul.clean{margin:10px 0 0 20px}
+    ul.clean li{margin:6px 0}
+
+    /* Footer */
+    footer{margin-top:28px; color:var(--ink-muted); font-size:.92rem; display:flex; gap:10px; justify-content:flex-end}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- HERO -->
+    <header class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Analytics &amp; Insights</h1>
+      <p class="lead">We turn data into decisions that drive commercial impact and better outcomes for patients.</p>
+      <div class="meta">Roche Canada — Commercial | Analytics &amp; Insights</div>
+    </header>
+
+    <!-- ORG OVERVIEW -->
+    <section class="section" aria-labelledby="overview-title">
+      <div class="section-header">
+        <h2 id="overview-title" class="section-title">What we do</h2>
+        <div class="section-meta">Advanced Analytics &amp; Analytics & Insights Managers</div>
+      </div>
+      <div class="section-body">
+        <div class="grid cols-2">
+          <!-- Advanced Analytics card -->
+          <div class="card">
+            <h3>Advanced Analytics</h3>
+            <p class="muted">Empowering smarter decisions through Data &amp; AI.</p>
+            <p>Roche Canada’s Advanced Analytics team partners with the commercial organization to transform complex data into actionable insights that enhance sales performance, customer engagement, and patient treatment. By combining advanced statistics, machine learning, and Generative AI, we deliver smarter, faster, and more scalable decision support.</p>
+            <h4 class="muted" style="margin:14px 0 6px; font-size:.95rem; text-transform:uppercase; letter-spacing:.02em;">Our expertise spans</h4>
+            <ul class="clean">
+              <li><strong>Customer Engagement</strong> — Insight summarization, next best action, and segmentation.</li>
+              <li><strong>Patient Treatment Insights</strong> — Patient journey analytics, segmentation, and access analysis.</li>
+              <li><strong>Resource Optimization</strong> — Field team deployment, account prioritization, forecasting, and impact analysis.</li>
+              <li><strong>Healthcare Ecosystem Analytics</strong> — Network mapping, stakeholder identification, system KPIs, and catchment area analysis.</li>
+              <li><strong>Advanced Reporting &amp; Data Access</strong> — Trigger alerts, automated reporting, and integration of structured and unstructured data.</li>
+            </ul>
+            <p style="margin-top:12px">We are also stewards of Roche’s commercial data assets — the <em>Canada Operations Dashboard (COD)</em>, the <em>Canada Data Lake</em>, and <em>Master Data Management</em> systems — ensuring trusted, real-time data access. Through automated pipelines and AI-driven insights, we help Roche achieve measurable business impact and better outcomes for patients.</p>
+          </div>
+
+          <!-- A&I Managers card (updated description) -->
+          <div class="card" aria-labelledby="aim-title">
+            <h3 id="aim-title">Analytics &amp; Insights Managers</h3>
+            <p class="muted">Deriving Insights • Storytelling • Strategic Partnership</p>
+            <p>Analytics &amp; Insights Managers derive insights from data — including primary market research and secondary sources — and work closely with the Advanced Analytics team. They partner with Squads and therapeutic area teams to connect evidence with strategy and decision-making.</p>
+            <ul class="clean">
+              <li>Design and execute qualitative &amp; quantitative research (e.g., HCP/patient studies, ATUs, concept tests) to address Squad and TA learning agendas.</li>
+              <li>Synthesize primary research with secondary sources (claims/EMR, syndicated, digital signals) to produce integrated, decision-ready insights.</li>
+              <li>Translate insights into prioritized recommendations; partner with Squads to shape experiments, omnichannel plans, and brand strategy.</li>
+              <li>Establish research governance: standards, vendor management, and documentation of assumptions and evidence.</li>
+              <li>Craft clear narratives and executive-ready deliverables; champion data storytelling and influence across functions.</li>
+              <li>Define feedback loops and KPIs to measure impact; iterate approaches based on outcomes and learning.</li>
+              <li>Ensure compliance with privacy, consent, and data-use policies across all research activities.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="section" aria-labelledby="highlights-title">
+      <div class="section-header">
+        <h2 id="highlights-title" class="section-title">How we partner</h2>
+        <div class="section-meta">Engagement at a glance</div>
+      </div>
+      <div class="section-body">
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Business Questions → Analytics</h3>
+            <p>We start with outcomes: define the decision, map required inputs, and select the appropriate methods (from descriptive to predictive &amp; prescriptive).</p>
+          </div>
+          <div class="card">
+            <h3>Data to Decisions</h3>
+            <p>We combine Roche internal data and trusted external sources; build repeatable pipelines; and deliver insights via dashboards, reports, and guided actions.</p>
+          </div>
+          <div class="card">
+            <h3>Scalable Delivery</h3>
+            <p>Automated reporting, alerts, and AI copilots help teams act faster while maintaining consistency and governance.</p>
+          </div>
+          <div class="card">
+            <h3>Measurable Impact</h3>
+            <p>We quantify value through clear KPIs, experiment design, and impact analyses to inform next best investments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Questions? Reach out to the Analytics &amp; Insights team.</span>
+    </footer>
+  </div>
+</body>
+</html>
