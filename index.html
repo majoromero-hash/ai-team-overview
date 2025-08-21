@@ -6,15 +6,18 @@
   <title>Analytics & Insights — Roche Canada</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* ================= Roche Brand Tokens (reused) ================= */
     :root{
       --roche-blue:#0b41cd;
       --roche-blue-dark:#022366;
       --roche-blue-xlight:#bde3ff;
+
       --neutral-4:#fff7f5;
-      --grey-1:#000; /* Body text now black */
+      --grey-1:#544f4f;
       --grey-2:#706b69;
       --grey-3:#c2bab5;
       --grey-5:#f5f5f2;
+
       --bg: var(--grey-5);
       --card:#fff;
       --ink: var(--grey-1);
@@ -24,6 +27,7 @@
       --radius-lg: 14px;
       --shadow: 0 10px 24px rgba(0,0,0,.06);
     }
+
     *{box-sizing:border-box}
     body{
       margin:0;
@@ -33,6 +37,8 @@
       background:linear-gradient(0deg, var(--neutral-4), var(--grey-5));
     }
     .wrap{max-width:1200px; margin:28px auto 64px; padding:0 20px;}
+
+    /* Header (hero) */
     header.hero{
       background:var(--card);
       border:1px solid var(--line);
@@ -41,29 +47,10 @@
       padding:28px 24px;
       box-shadow:var(--shadow);
     }
-    /* New main heading style */
-    .hero h1{
-      margin:0 0 10px 0;
-      font-size:clamp(28px,2.5vw + 20px,48px);
-      color:var(--roche-blue-dark);
-      font-weight:800;
-      line-height:1.08;
-    }
-    /* Subheading style */
-    .hero .subtitle {
-      margin:0 0 10px 0;
-      font-size:1.6rem;
-      color:#706b69;
-      font-weight:700;
-      line-height:1.2;
-    }
-    .hero .meta{
-      margin-top:0;
-      font-weight:700;
-      color:var(--roche-blue-dark);
-      font-size:1.25rem;
-      letter-spacing:0;
-    }
+    .hero h1{margin:0 0 6px; font-size:clamp(28px,2.5vw + 10px,40px); color:var(--roche-blue-dark)}
+    .hero p{margin:0; color:var(--ink-muted); max-width:72ch}
+    .hero .meta{margin-top:8px; font-weight:600; color:var(--roche-blue-dark)}
+
     /* Section shells */
     .section{
       background:var(--card);
@@ -82,6 +69,8 @@
     .section-title{margin:0; font-size:1.2rem; font-weight:700; color:var(--roche-blue-dark)}
     .section-meta{font-size:.9rem; color:var(--ink-muted); font-weight:600}
     .section-body{padding:18px 22px}
+
+    /* Layout helpers */
     .grid{
       display:grid;
       gap:16px;
@@ -89,6 +78,8 @@
     @media (min-width: 840px){
       .grid.cols-2{grid-template-columns:1fr 1fr}
     }
+
+    /* Cards for highlights */
     .card{
       border:1px solid var(--line);
       border-radius:14px;
@@ -105,6 +96,8 @@
     .muted{color:var(--ink-muted)}
     ul.clean{margin:10px 0 0 20px}
     ul.clean li{margin:6px 0}
+
+    /* Footer */
     footer{margin-top:28px; color:var(--ink-muted); font-size:.92rem; display:flex; gap:10px; justify-content:flex-end}
   </style>
 </head>
@@ -112,7 +105,8 @@
   <div class="wrap">
     <!-- HERO -->
     <header class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">We turn data into decisions that drive commercial impact and better outcomes for patients.</h1>
+      <h1 id="hero-title">Analytics &amp; Insights</h1>
+      <p class="lead">We turn data into decisions that drive commercial impact and better outcomes for patients.</p>
       <div class="meta">Roche Canada — Commercial | Analytics &amp; Insights</div>
     </header>
 
@@ -139,7 +133,8 @@
             </ul>
             <p style="margin-top:12px">We are also stewards of Roche’s commercial data assets — the <em>Canada Operations Dashboard (COD)</em>, the <em>Canada Data Lake</em>, and <em>Master Data Management</em> systems — ensuring trusted, real-time data access. Through automated pipelines and AI-driven insights, we help Roche achieve measurable business impact and better outcomes for patients.</p>
           </div>
-          <!-- A&I Managers card -->
+
+          <!-- A&I Managers card (updated description) -->
           <div class="card" aria-labelledby="aim-title">
             <h3 id="aim-title">Analytics &amp; Insights Managers</h3>
             <p class="muted">Deriving Insights • Storytelling • Strategic Partnership</p>
